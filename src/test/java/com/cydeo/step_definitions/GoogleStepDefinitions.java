@@ -7,6 +7,9 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 
+import java.util.List;
+import java.util.Map;
+
 public class GoogleStepDefinitions {
 
 
@@ -57,5 +60,11 @@ public class GoogleStepDefinitions {
         String expectedTitle = arg0 + " - Google Search";
         String actualTitle = Driver.getDriver().getTitle();
         Assert.assertTrue(expectedTitle.equals(actualTitle));
+    }
+
+
+    @Then("user should see {string} in the result")
+    public void userShouldSeeInTheResult(String arg0) {
+        System.out.println("googleSearchPage.getCapital(arg0).getText() = " + googleSearchPage.getCapital(arg0).getText());
     }
 }
