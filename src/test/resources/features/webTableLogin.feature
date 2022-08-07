@@ -11,7 +11,7 @@ Feature: Login Scenario
     And User click login button
     Then User sees URL ends with orders
 
-
+  @demo
   Scenario: User should be able to see all 12 months in months dropdown
     When User enters below credentials
       | username | Test   |
